@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <head>
-    <script defer src="dist/static/main.js"></script>
+    <script defer src="main.js"></script>
     <link rel="stylesheet" href="css/chess.css"></link>
 
     <style>
+        .board-area {
+            margin-left: 5vw;
+            margin-top: 5vh;
+        }
+
         #chess-board {
             width: 600px;
             height: 600px;
-            margin-left: 5vw;
-            margin-top: 5vh;
+            
         }
     </style>
 </head>
 <body>
-    <div id="chess-board"></div>
+    <div class="board-area">
+        <div>
+            <span>Boxfish Level: </span>
+            <select name="boxfish-level" id="boxfish-level">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20" selected="selected">20</option>
+            </select>
+        </div>
+        <div>
+            <span>Boxfish Time to Move: </span>
+            <select name="boxfish-ttm" id="boxfish-ttm">
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="3000" selected="selected">3000</option>
+                <option value="5000">5000</option>
+                <option value="10000">10000</option>
+            </select>
+            <span> ms</span>
+        </div>
+        <div id="chess-board"></div>
+    </div>
+    
 </body>
