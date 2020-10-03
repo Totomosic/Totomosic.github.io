@@ -18,3 +18,21 @@
 
 .chess-square {
 }
+
+.move-list {
+    margin-left: 20px;
+}
+
+.line-div {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.score-div {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.move-div {
+    padding: 5px;
+}

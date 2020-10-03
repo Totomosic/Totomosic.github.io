@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <title>Play Boxfish</title>
     <script defer src="main.js"></script>
     <link rel="stylesheet" href="css/chess.css"></link>
 
@@ -55,7 +56,26 @@
             </select>
             <span> ms</span>
         </div>
-        <div id="chess-board"></div>
+        <div>
+            <span>Play As: </span>
+            <select name="play-as" id="play-as">
+                <option value="white" selected="selected">White</option>
+                <option value="black">Black</option>
+                <option value="both">Both</option>
+            </select>
+        </div>
+        <div>
+            <button id="reset-button">Reset</button>
+            <span>
+                <span>Show Engine Lines: </span>
+                <input type="checkbox" id="show-engine-lines"></input>
+            </span>
+        </div>
+        <div style="display: flex;">
+            <div id="chess-board"></div>
+            <span class="move-list" id="move-list"></span>
+            <div id="engine-lines"></div>
+        </div>
     </div>
     
 </body>
