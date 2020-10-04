@@ -5,16 +5,27 @@
     <link rel="stylesheet" href="css/chess.css"></link>
 
     <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 11pt;
+        }
+
         .board-area {
             margin-left: 5vw;
             margin-top: 5vh;
         }
 
         #chess-board {
+            margin-top: 10px;
             width: 600px;
             height: 600px;
             min-width: 600px;
             min-height: 600px;
+        }
+
+        #eval-bar {
+            margin-top: 10px;
+            margin-right: 20px;
         }
     </style>
 </head>
@@ -66,13 +77,18 @@
             </select>
         </div>
         <div>
+            <span>Show Engine Lines: </span>
+            <input type="checkbox" id="show-engine-lines"></input>
+        </div>
+        <div>
+            <span>Show Eval: </span>
+            <input type="checkbox" id="show-engine-eval"></input>
+        </div>
+        <div>
             <button id="reset-button">Reset</button>
-            <span>
-                <span>Show Engine Lines: </span>
-                <input type="checkbox" id="show-engine-lines"></input>
-            </span>
         </div>
         <div style="display: flex;">
+            <div id="eval-bar"></div>
             <div id="chess-board"></div>
             <span class="move-list" id="move-list"></span>
             <div class="engine-lines" id="engine-lines"></div>
