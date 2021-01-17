@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
-    <title>Play Boxfish</title>
+    <title>Play Storm</title>
     <script defer src="main.js"></script>
+    <script defer src="index.js"></script>
     <link rel="stylesheet" href="css/chess.css"></link>
 
     <style>
@@ -15,25 +16,28 @@
             margin-top: 5vh;
         }
 
-        #chess-board {
+        .board {
+            margin-left: 20px;
             margin-top: 10px;
             width: 600px;
             height: 600px;
             min-width: 600px;
-            min-height: 600px;
         }
 
         #eval-bar {
             margin-top: 10px;
-            margin-right: 20px;
+        }
+
+        .board:focus {
+            outline: none;
         }
     </style>
 </head>
 <body>
     <div class="board-area">
         <div>
-            <span>Boxfish Level: </span>
-            <select name="boxfish-level" id="boxfish-level">
+            <span>Storm Level: </span>
+            <select name="storm-level" id="storm-level">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -57,8 +61,8 @@
             </select>
         </div>
         <div>
-            <span>Boxfish Time to Move: </span>
-            <select name="boxfish-ttm" id="boxfish-ttm">
+            <span>Storm Time to Move: </span>
+            <select name="storm-ttm" id="storm-ttm">
                 <option value="100">100</option>
                 <option value="500">500</option>
                 <option value="1000">1000</option>
@@ -88,9 +92,12 @@
             <button id="reset-button">Reset</button>
             <button id="flip-button">Flip Board</button>
         </div>
+        <div>
+            <!--button id="edit-button">Edit Board</button-->
+        </div>
         <div style="display: flex;">
             <div id="eval-bar"></div>
-            <div id="chess-board"></div>
+            <div class="board" id="chess-board" tabindex="0"></div>
             <span class="move-list" id="move-list"></span>
             <div class="engine-lines" id="engine-lines"></div>
         </div>
