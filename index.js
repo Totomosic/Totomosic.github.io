@@ -87,10 +87,31 @@ Chess.Initialize().then(() => {
         app.analyzer.evalEnabled = engineEvalEnable.checked
     }
 
+    const sandboxEnable = document.getElementById("sandbox")
+    if (sandboxEnable) {
+        sandboxEnable.onchange = (e) => {
+            app.board.onlyLegalMoves = !sandboxEnable.checked
+        }
+        app.board.onlyLegalMoves = !sandboxEnable.checked
+    }
+
     const editButton = document.getElementById("edit-button")
     if (editButton) {
         editButton.onclick = (e) => {
             editor.beginEditing(true)
+        }
+    }
+
+    const fenInput = document.getElementById("current-fen")
+    if (fenInput) {
+        app.board.onPositionChanged.addEventListener(() => {
+            fenInput.value = app.board.getFen()
+        })
+        const updateFenButton = document.getElementById("update-fen-button")
+        if (updateFenButton) {
+            updateFenButton.onclick = (e) => {
+                app.board.setFromFen(fenInput.value)
+            }
         }
     }
 

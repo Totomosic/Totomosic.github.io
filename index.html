@@ -89,11 +89,16 @@
             <input type="checkbox" id="show-engine-eval"></input>
         </div>
         <div>
+            <span>Sandbox: </span>
+            <input type="checkbox" id="sandbox"></input>
+        </div>
+        <div>
             <button id="reset-button">Reset</button>
             <button id="flip-button">Flip Board</button>
         </div>
         <div>
-            <!--button id="edit-button">Edit Board</button-->
+            <input style="width: 500px; margin-top: 2px" id="current-fen" type="text"></input>
+            <button id="update-fen-button">Set FEN</button>
         </div>
         <div style="display: flex;">
             <div id="eval-bar"></div>
