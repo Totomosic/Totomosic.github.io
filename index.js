@@ -87,6 +87,15 @@ Chess.Initialize().then(() => {
         app.analyzer.evalEnabled = engineEvalEnable.checked
     }
 
+    const nnueEnable = document.getElementById("use-nnue")
+    if (nnueEnable) {
+        nnueEnable.onchange = (e) => {
+            app.analyzer.useNNUE = nnueEnable.checked
+            stormPlayer.useNNUE = nnueEnable.checked
+        }
+        app.analyzer.useNNUE = nnueEnable.checked
+    }
+
     const sandboxEnable = document.getElementById("sandbox")
     if (sandboxEnable) {
         sandboxEnable.onchange = (e) => {
